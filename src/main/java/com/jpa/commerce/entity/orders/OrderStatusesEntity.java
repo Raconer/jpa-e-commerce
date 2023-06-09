@@ -21,7 +21,7 @@ public class OrderStatusesEntity extends CommonEntity {
 
     @ManyToOne
     @JoinColumn(name = "order_id")
-    private OrdersEntity orders;
+    private OrderEntity orders;
 
     @Column
     private String status;

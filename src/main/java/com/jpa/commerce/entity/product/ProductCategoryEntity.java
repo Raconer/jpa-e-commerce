@@ -1,6 +1,6 @@
 package com.jpa.commerce.entity.product;
 
-import com.jpa.commerce.entity.category.CategoriesEntity;
+import com.jpa.commerce.entity.category.CategoryEntity;
 import com.jpa.commerce.entity.common.CommonEntity;
 
 import javax.persistence.*;
@@ -8,13 +8,13 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "ProductCategories")
-@IdClass(ProductCategoriesEntity.ProductCategoryId.class)
-public class ProductCategoriesEntity extends CommonEntity {
+@IdClass(ProductCategoryEntity.ProductCategoryId.class)
+public class ProductCategoryEntity extends CommonEntity {
 
     @Id
     @ManyToOne
     @JoinColumn(name = "category_id")
-    private CategoriesEntity categories;
+    private CategoryEntity categories;
 
     @Id
     @ManyToOne
@@ -22,7 +22,7 @@ public class ProductCategoriesEntity extends CommonEntity {
     private ProductsEntity products;
 
     public static class ProductCategoryId implements Serializable {
-        private CategoriesEntity categories;
+        private CategoryEntity categories;
         private ProductsEntity products;
 
     }

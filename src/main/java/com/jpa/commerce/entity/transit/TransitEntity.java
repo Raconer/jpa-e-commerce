@@ -12,7 +12,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.jpa.commerce.entity.common.CommonEntity;
-import com.jpa.commerce.entity.orders.OrdersEntity;
+import com.jpa.commerce.entity.orders.OrderEntity;
 
 @Entity
 @Table(name = "Transit")
@@ -24,7 +24,7 @@ public class TransitEntity extends CommonEntity {
 
     @OneToOne
     @JoinColumn(name = "orders_id")
-    private OrdersEntity orders;
+    private OrderEntity orders;
 
     @Column
     private Date transitDate;
