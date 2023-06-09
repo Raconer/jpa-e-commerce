@@ -1,4 +1,4 @@
-package com.jpa.commerce.entity.orders;
+package com.jpa.commerce.entity.order;
 
 import java.sql.Date;
 
@@ -18,7 +18,7 @@ import com.jpa.commerce.entity.product.ProductsEntity;
 
 @Entity
 @Table(name = "orders")
-public class OrdersEntity extends CommonEntity {
+public class OrderEntity extends CommonEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

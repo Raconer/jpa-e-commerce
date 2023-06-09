@@ -11,7 +11,7 @@ import com.jpa.commerce.entity.common.CommonEntity;
 
 @Entity
 @Table(name = "Categories")
-public class CategoriesEntity extends CommonEntity {
+public class CategoryEntity extends CommonEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

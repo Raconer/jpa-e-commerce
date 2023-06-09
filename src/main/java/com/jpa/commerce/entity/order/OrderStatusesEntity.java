@@ -1,4 +1,4 @@
-package com.jpa.commerce.entity.orders;
+package com.jpa.commerce.entity.order;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,7 +21,7 @@ public class OrderStatusesEntity extends CommonEntity {
 
     @ManyToOne
     @JoinColumn(name = "order_id")
-    private OrdersEntity orders;
+    private OrderEntity orders;
 
     @Column
     private String status;
