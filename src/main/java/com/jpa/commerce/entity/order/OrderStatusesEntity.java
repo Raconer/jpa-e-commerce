@@ -1,6 +1,4 @@
-package com.jpa.commerce.entity.orders;
-
-import java.sql.Date;
+package com.jpa.commerce.entity.order;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,28 +9,21 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.ColumnDefault;
-
 import com.jpa.commerce.entity.common.CommonEntity;
-import com.jpa.commerce.entity.product.ProductsEntity;
 
 @Entity
-@Table(name = "orders")
-public class OrderEntity extends CommonEntity {
+@Table(name = "OrderStatuses")
+public class OrderStatusesEntity extends CommonEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "product_id")
-    private ProductsEntity product;
+    @JoinColumn(name = "order_id")
+    private OrderEntity orders;
 
     @Column
-    @ColumnDefault("0")
-    private int quantity;
-
-    @Column
-    private Date orderDate;
+    private String status;
 
 }

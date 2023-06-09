@@ -12,7 +12,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.jpa.commerce.entity.common.CommonEntity;
-import com.jpa.commerce.entity.orders.OrderEntity;
+import com.jpa.commerce.entity.order.OrderEntity;
 
 @Entity
 @Table(name = "Transit")
