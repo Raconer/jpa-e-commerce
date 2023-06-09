@@ -6,7 +6,14 @@ spring:
         username: root
         password: root
     jpa:
-      show-sql: true 
+      show-sql: true # SQL 콘솔 표시
       hibernate: 
         use-new-id-generator-mappings: false
         ddl-auto: create-drop
+      properties:
+        hibernate:
+          format_sql: true # SQL 쿼리를 보기 쉽게  포맷
+logging:
+  level:
+    org.hibernate.sql: DEBUG # Hibernate SQL 문장을 디버그 레벨로 설정하여 쿼리를 로그에 남깁니다.
+    org.hibernate.type.descriptor.sql.BasicBinder: trace # 파라미터 바인딩을 추적하는 추가적인 디버그 정보를 로그에 기록
