@@ -13,6 +13,6 @@ public class CommonEntity {
     @Column(updatable = false, nullable = false)
     protected Date regDate;
 
-    @Column(nullable = true, insertable = false)
+    @Column(nullable = true, insertable = true)
     protected Date modDate;
 }
