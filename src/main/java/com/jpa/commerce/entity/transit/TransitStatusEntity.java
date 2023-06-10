@@ -10,9 +10,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.jpa.commerce.entity.common.CommonEntity;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+@Data
 @Entity
 @Table(name = "TransitStatus")
+@EqualsAndHashCode(callSuper=false)
 public class TransitStatusEntity extends CommonEntity {
 
     @Id

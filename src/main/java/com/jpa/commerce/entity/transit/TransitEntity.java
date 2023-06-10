@@ -13,9 +13,13 @@ import javax.persistence.Table;
 
 import com.jpa.commerce.entity.common.CommonEntity;
 import com.jpa.commerce.entity.order.OrderEntity;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+@Data
 @Entity
 @Table(name = "Transit")
+@EqualsAndHashCode(callSuper=false)
 public class TransitEntity extends CommonEntity {
 
     @Id
