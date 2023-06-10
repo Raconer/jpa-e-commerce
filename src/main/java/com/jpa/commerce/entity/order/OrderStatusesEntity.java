@@ -11,10 +11,12 @@ import javax.persistence.Table;
 
 import com.jpa.commerce.entity.common.CommonEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
 @Entity
 @Table(name = "OrderStatuses")
+@EqualsAndHashCode(callSuper=false)
 public class OrderStatusesEntity extends CommonEntity {
 
     @Id

@@ -2,10 +2,10 @@ package com.jpa.commerce.entity.common;
 
 import lombok.Data;
 
-import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
+import java.util.Date;
+
 @Data
 @MappedSuperclass
 public class CommonEntity {

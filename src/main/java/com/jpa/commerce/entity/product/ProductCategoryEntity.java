@@ -3,6 +3,7 @@ package com.jpa.commerce.entity.product;
 import com.jpa.commerce.entity.category.CategoryEntity;
 import com.jpa.commerce.entity.common.CommonEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -10,6 +11,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "ProductCategories")
 @IdClass(ProductCategoryEntity.ProductCategoryId.class)
+@EqualsAndHashCode(callSuper=false)
 public class ProductCategoryEntity extends CommonEntity {
 
     @Id

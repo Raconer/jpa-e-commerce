@@ -8,12 +8,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.hibernate.annotations.ColumnDefault;
 
 import com.jpa.commerce.entity.common.CommonEntity;
 @Data
 @Entity
 @Table(name = "Products")
+@EqualsAndHashCode(callSuper=false)
 public class ProductsEntity extends CommonEntity {
 
     @Id
