@@ -2,10 +2,11 @@ package com.jpa.commerce.entity.product;
 
 import com.jpa.commerce.entity.category.CategoryEntity;
 import com.jpa.commerce.entity.common.CommonEntity;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.io.Serializable;
-
+@Data
 @Entity
 @Table(name = "ProductCategories")
 @IdClass(ProductCategoryEntity.ProductCategoryId.class)

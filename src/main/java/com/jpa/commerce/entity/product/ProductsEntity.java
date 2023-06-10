@@ -7,10 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
 import org.hibernate.annotations.ColumnDefault;
 
 import com.jpa.commerce.entity.common.CommonEntity;
-
+@Data
 @Entity
 @Table(name = "Products")
 public class ProductsEntity extends CommonEntity {

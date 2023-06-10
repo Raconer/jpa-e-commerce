@@ -8,7 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.jpa.commerce.entity.common.CommonEntity;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "Categories")
 public class CategoryEntity extends CommonEntity {

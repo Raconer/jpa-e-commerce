@@ -13,7 +13,9 @@ import javax.persistence.Table;
 
 import com.jpa.commerce.entity.common.CommonEntity;
 import com.jpa.commerce.entity.order.OrderEntity;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "Transit")
 public class TransitEntity extends CommonEntity {
