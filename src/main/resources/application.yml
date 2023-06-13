@@ -1,8 +1,20 @@
 server:
   port: 8090
 spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    hikari:
+      connectionTimeout: 5000
+      validationTimeout: 1000
+      maximumPoolSize: 10
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
   jpa:
+    database: h2
     show-sql: true
     hibernate:
       use-new-id-generator-mappings: false
-      ddl-auto: validate
+      ddl-auto: create
+    defer-datasource-initialization: true
