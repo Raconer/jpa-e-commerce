@@ -1,3 +1,7 @@
+DELETE FROM product_categories;
+DELETE FROM categories;
+DELETE FROM products;
+
 INSERT INTO categories (name, reg_date)
 VALUES
     ('가구', NOW()),
@@ -43,3 +47,26 @@ VALUES
     ('양말', 5000, NOW()),
     ('화장지', 3000, NOW()),
     ('우산', 10000, NOW());
+
+INSERT INTO product_categories (product_id, category_id, reg_date)
+VALUES
+    (1, 1, NOW()),
+    (2, 1, NOW()),
+    (3, 2, NOW()),
+    (4, 2, NOW()),
+    (5, 3, NOW()),
+    (6, 3, NOW()),
+    (7, 4, NOW()),
+    (8, 4, NOW()),
+    (9, 5, NOW()),
+    (10, 5, NOW()),
+    (11, 6, NOW()),
+    (12, 6, NOW()),
+    (13, 7, NOW()),
+    (14, 7, NOW()),
+    (15, 8, NOW()),
+    (16, 8, NOW()),
+    (17, 9, NOW()),
+    (18, 9, NOW()),
+    (19, 10, NOW()),
+    (20, 10, NOW());
